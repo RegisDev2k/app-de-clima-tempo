@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo de Clima</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Aplicativo de Clima</h1>
+    
+    <div class="input-container">
+        <input type="text" id="city-input" placeholder="Digite o nome da cidade...">
+        <button id="search-button"><i class="fas fa-search"></i></button>
+    </div>
+    
+    <div class="icon">
+        <i id="weather-icon" class="fas fa-sun"></i>
+    </div>
+    
+    <div id="temperature">--°C</div>
+    <div id="city-name">Nome da Cidade</div>
+    <div id="description">Descrição</div>
+
+    <div id="forecast">
+        <div class="forecast-day" onclick="toggleDetails(this)">
+            <div class="forecast-date">Seg</div>
+            <div class="forecast-icon"><i class="fas fa-sun"></i></div>
+            <div class="forecast-temp">24°C</div>
+            <div class="forecast-details" style="display: none;">
+                <div class="forecast-description">Dia ensolarado.</div>
+            </div>
+        </div>
+        <div class="forecast-day" onclick="toggleDetails(this)">
+            <div class="forecast-date">Ter</div>
+            <div class="forecast-icon"><i class="fas fa-cloud-sun"></i></div>
+            <div class="forecast-temp">22°C</div>
+            <div class="forecast-details" style="display: none;">
+                <div class="forecast-description">Céu nublado com sol.</div>
+            </div>
+        </div>
+        <div class="forecast-day" onclick="toggleDetails(this)">
+            <div class="forecast-date">Qua</div>
+            <div class="forecast-icon"><i class="fas fa-cloud-rain"></i></div>
+            <div class="forecast-temp">20°C</div>
+            <div class="forecast-details" style="display: none;">
+                <div class="forecast-description">Esperam-se chuvas.</div>
+            </div>
+        </div>
+        <div class="forecast-day" onclick="toggleDetails(this)">
+            <div class="forecast-date">Qui</div>
+            <div class="forecast-icon"><i class="fas fa-snowflake"></i></div>
+            <div class="forecast-temp">18°C</div>
+            <div class="forecast-details" style="display: none;">
+                <div class="forecast-description">Possibilidade de neve.</div>
+            </div>
+        </div>
+        <div class="forecast-day" onclick="toggleDetails(this)">
+            <div class="forecast-date">Sex</div>
+            <div class="forecast-icon"><i class="fas fa-cloud"></i></div>
+            <div class="forecast-temp">21°C</div>
+            <div class="forecast-details" style="display: none;">
+                <div class="forecast-description">Céu parcialmente nublado.</div>
+            </div>
+        </div>
+    </div>
+    
+    <button id="refresh-button">Atualizar Clima</button>
+
+    <div id="error-message"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

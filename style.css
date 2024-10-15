@@ -1,0 +1,176 @@
+/* Estilo base */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #6e92f4, #a9d2ff); /* Gradiente de fundo */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+/* Container principal */
+.container {
+    max-width: 480px; /* Largura máxima para um design mais concentrado */
+    margin: 50px auto; /* Centraliza verticalmente */
+    padding: 40px; /* Aumenta o padding para um visual mais espaçoso */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+    border-radius: 20px; /* Bordas arredondadas */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    transition: transform 0.3s, box-shadow 0.3s; /* Efeitos de transição */
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Efeito de flutuação */
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.4); /* Sombra mais intensa ao passar o mouse */
+}
+
+/* Estilo do título */
+h1 {
+    font-weight: 500; /* Peso da fonte */
+    margin-bottom: 30px; /* Espaço abaixo do título */
+    color: #132443; /* Cor do título */
+    text-transform: uppercase; /* Letras maiúsculas */
+}
+
+/* Estilo do input e botão de busca */
+.input-container {
+    display: flex; /* Flexbox para alinha horizontalmente */
+    justify-content: center; /* Centraliza os itens */
+}
+
+input[type="text"] {
+    width: 70%; /* Largura do input */
+    padding: 15px; /* Espaçamento interno */
+    border: 2px solid #6e92f4; /* Borda azul */
+    border-radius: 25px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: border-color 0.3s; /* Transição suave */
+    outline: none; /* Remove a borda padrão ao focar */
+    margin-right: 10px;
+}
+
+input[type="text"]:focus {
+    border-color: #3b5796; /* Cor da borda ao focar */
+}
+
+button {
+    background-color: #007bff; /* Azul */
+    color: white;
+    border: none;
+    padding: 15px 20px; /* Aumenta o padding para botões maiores */
+    cursor: pointer;
+    border-radius: 25px; /* Bordas arredondadas */
+    font-size: 18px; /* Tamanho da fonte maior */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Transições suaves */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de levantar */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+/* Estilo para previsão do tempo */
+#forecast {
+    display: flex; /* Usando flexbox para disposição em linha */
+    justify-content: space-between; /* Espaço igual entre os itens */
+    flex-wrap: wrap; /* Permite quebrar a linha se o espaço for insuficiente */
+}
+
+.forecast-day {
+    flex: 1 1 18%;
+    border: 1px solid #ddd;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.forecast-day:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fundo branco ao passar o mouse */
+}
+
+.forecast-date {
+    font-weight: bold; /* Negrito para as datas */
+    font-size: 18px; /* Tamanho da fonte */
+    color: #132443; /* Cor do texto */
+}
+
+.forecast-icon {
+    font-size: 30px; /* Tamanho do ícone */
+    margin: 10px 0; /* Espaço acima e abaixo do ícone */
+    color: #f39c12; /* Cor do ícone */
+}
+
+.forecast-temp {
+    font-size: 20px; /* Tamanho da fonte da temperatura */
+    color: #333; /* Cor do texto da temperatura */
+}
+
+/* Ícone do clima */
+#weather-icon {
+    font-size: 70px; /* Tamanho maior para ícones */
+    margin: 15px 0; /* Espaçamento acima e abaixo do ícone */
+    color: #f39c12; /* Cor do ícone */
+}
+
+/* Estilo do temperature e city-name */
+#temperature {
+    font-size: 48px; /* Tamanho da fonte */
+    font-weight: 500; /* Peso da fonte */
+    color: #132443; /* Cor do texto */
+}
+
+#city-name {
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: 400; /* Peso da fonte */
+    margin: 10px 0; /* Espaço acima e abaixo */
+    color: #666; /* Cor do texto */
+}
+
+#description {
+    font-size: 18px; /* Tamanho da fonte */
+    color: #777; /* Cor do texto */
+}
+
+/* Estilo para mensagem de erro */
+#error-message {
+    color: #e74c3c; /* Vermelho */
+    margin-top: 10px; /* Espaço acima */
+    font-weight: bold; /* Negrito */
+}
+
+/* Botão de atualização */
+#refresh-button {
+    background-color: #28a745; /* Verde */
+    margin-top: 20px; /* Espaço acima */
+    padding: 10px 15px; /* Padding para o botão */
+}
+
+#refresh-button:hover {
+    background-color: #218838; /* Verde mais escuro ao passar o mouse */
+}
+
+/* Estilo responsivo */
+@media (max-width: 480px) {
+
+    #weather-icon {
+        font-size: 50px; /* Tamanho do ícone menor em telas pequenas */
+    }
+
+    #temperature {
+        font-size: 36px; /* Tamanho da fonte menor em telas pequenas */
+    }
+
+    #city-name {
+        font-size: 20px; /* Tamanho da fonte menor em telas pequenas */
+    }
+
+    .container {
+        margin: 50px 10px;
+    }
+}
